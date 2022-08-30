@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>welcome</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="1.css">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+		integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css"
+		integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+</head>
+
+<body class="container border border-dark">
+
+
+	<form Class="w-50 d-block mx-auto m-3 bg-secondary container border border-dark" th:action="@{/register}"
+		th:objects="${employee}" method="post">
+
+		<fieldset>
+			<legend>
+				<h5 Class="text-center bg-primary ">EMPLOYEE REGISTRATION FORM</h5>
+			</legend>
+
+			<div Class="form-group m-3">
+				<label for="un">Username</label>
+				<input type="text" name="UserName" id="un" Class="form-control" required>
+			</div>
+
+			<div Class="form-group m-3">
+				<label for="pw">Password</label>
+				<input type="password" name="passWord" id="pw" Class="form-control" required>
+
+			</div>
+
+			<div>
+				<label for="radio1">Gender</label>
+				<div class="form-check">
+					<input type="radio" class="form-check-input" id="radio1" name="gender" value="male" checked
+						required>
+					Male
+					<label class="form-check-label" for="radio1"></label>
+				</div>
+				<div class="form-check">
+					<input type="radio" class="form-check-input" id="radio2" name="gender" value="female"
+						required>Female
+					<label class="form-check-label" for="radio2"></label>
+				</div>
+			</div>
+
+			<br>
+
+
+			<div Class="form-group m-3">
+				<label for="date">DOB</label>
+				<input type="date" name="DOB" id="date" Class="form-control" required>
+			</div>
+
+			<div Class="form-group m-3">
+				<label for="em">Email</label>
+				<input type="email" name="email" id="em" Class="form-control" required>
+			</div>
+
+			<div Class="form-group m-3">
+				<label for="ad">address</label>
+				<input type="text" name="address" id="ad" Class="form-control" required>
+			</div>
+
+
+			<div Class="form-group m-3">
+				<label for="number">ContactNo</label>
+				<input type="number" name="contactNo" id="number" Class="form-control" required>
+			</div>
+
+
+			<div class="mb-3">
+				<label for="exampleFormControlTextarea1" class="form-label">FeedBack</label>
+				<textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="feedBack"
+					required></textarea>
+			</div>
+
+
+			<div class="m-3 form-check">
+				<input type="checkbox" class="form-check-input" id="exampleCheck1" name="Check me out" required>
+				<label class="form-check-label" for="exampleCheck1">Check me out</label>
+			</div>
+
+			<!---->
+			<!--			<center class="m-3">-->
+			<!--				<button type="submit" class="btn btn-primary btn-md m-b">Submit</button>-->
+			<!--			</center>-->
+			<!---->
+			<!---->
+			<!---->
+			<!--<input class="btn btn-primary" type="submit" value="Submit">-->
+			<!--<input class="btn btn-primary" type="reset" value="Reset">-->
+			<!---->
+
+			<div class="text-center">
+				<button type="submit" class="btn btn-primary">Submit</button>
+			</div>
+
+		</fieldset>
+	</form>
+
+
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
+		integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+		crossorigin="anonymous"></script>
+	<!-- <script src="" async defer></script> -->
+
+</body>
+
+</html>
